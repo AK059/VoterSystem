@@ -1,0 +1,38 @@
+﻿@model VoterSystem.Models.ApplicantVotes
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>ApplicantVotes</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Applicant" class="control-label"></label>
+                <input asp-for="Applicant" class="form-control" />
+                <span asp-validation-for="Applicant" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ElectionCount" class="control-label"></label>
+                <input asp-for="ElectionCount" class="form-control" />
+                <span asp-validation-for="ElectionCount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
