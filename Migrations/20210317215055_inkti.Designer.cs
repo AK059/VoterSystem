@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using VoterSystem.Data;
 
 namespace VoterSystem.Migrations
 {
     [DbContext(typeof(ApplicantDbContext))]
-    partial class ApplicantDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210317215055_inkti")]
+    partial class inkti
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

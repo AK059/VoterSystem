@@ -30,6 +30,7 @@ namespace VoterSystem
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
+            //Add New Services to the container
             services.AddDbContext<ApplicantDbContext>(options =>
                options.UseSqlServer(
                    Configuration.GetConnectionString("ApplicantDbContext")));
