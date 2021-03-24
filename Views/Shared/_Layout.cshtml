@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - VoterSystem</title>
+    <title>@ViewData["Title"]</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
@@ -16,50 +16,57 @@
     <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link rel="stylesheet" href="assets/css/templatemo-host-cloud.css">
     <link rel="stylesheet" href="assets/css/owl.css">
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Oswald:wght@200;300;400&display=swap" rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">VoterSystem</a>
+<body style="background-color:bisque;">
+    <header style="background-color:bisque;">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg- border-bottom box-shadow mb-3 ">
+            <div class="container" style="background-color:lightblue;">
+                <a asp-area="" asp-controller="Home" class="nav-item nav-link active text-black"><b>VoterSystem</b></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <!---Add navbar here -->
-                    <ul class="navbar-nav flex-grow-1">
-                       
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Applicants">Applicants</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="ApplicantVotes">ApplicantVotes</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Elections">Elections</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Electors">Electors</a>
-                        </li>
-                    </ul>
-                    <partial name="_LoginPartial" />
-                </div>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto ">
+                        <!--chnage the navigation-->
+                        
+                        <a asp-area="" asp-controller="Applicants" class="nav-item nav-link active text-black"><b>Applicant</b></a>
+                        <a asp-area="" asp-controller="ApplicantVotes" class="nav-item nav-link active text-black"><b>Applicant Vote</b></a>
+                        <a asp-area="" asp-controller="Elections" class="nav-item nav-link active text-black"><b>Election</b></a>
+                        <a asp-area="" asp-controller="Electors" class="nav-item nav-link active text-black"><b>Elector</b></a>
+                       </div>
+                
+                <partial name="_LoginPartial" />
+                   
+            </div>
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
+
+    
+    <div>
+        <main>
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2021 - VoterSystem - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer class="border-top bg-white footer text-muted"><<!--change the footer-->
+        <div class="container" style="color: black; text-align:center; margin-top:5%; margin-bottom:2%; font-size:xx-large; font-family:'Comic Sans MS';">
+           <b> &copy; 2021 - VoterSystem - <a style="color:black; padding-bottom:20px; text-align: center;" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a></b>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

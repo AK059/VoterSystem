@@ -10,9 +10,9 @@ namespace VoterSystem.Models
     public class Applicant
     {
      public int Id { get; set; }
-      
+     
      public string Name { get; set; }
-        [Required]
+        [Required] //Here add forigen key
         public string ApplicantProfileWebSite { get; set; }
     }
 }

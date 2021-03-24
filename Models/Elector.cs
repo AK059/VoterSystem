@@ -10,7 +10,7 @@ namespace VoterSystem.Models
     public class Elector
     {
         public int Id { get; set; }
-            [Required]
+            [Required]//add forigen key
        public string Name { get; set; }
       public string Email { get; set; }
      }

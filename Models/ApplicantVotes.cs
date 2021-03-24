@@ -11,7 +11,7 @@ namespace VoterSystem.Models
     {
      public int Id { get; set; }
       public string Applicant { get; set; }
-        [Required]
+        [Required]//here add forigen key
         public int ElectionCount { get; set; }
     }
 }
